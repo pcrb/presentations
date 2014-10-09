@@ -1,0 +1,5 @@
+<tr class="<%= cycle("odd", "even") %> item" data-item-id="<%= thing.id %>">
+  <td class="vertical_move_handle" title="Grab and drag to reorder things"></td>
+  <td><%= link_to(thing.title, thing_path(thing)) %></td>
+  <td><%= thing.widgets.count %></td>
+</tr>

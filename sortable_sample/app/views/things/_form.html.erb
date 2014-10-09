@@ -1,0 +1,24 @@
+<%= form.text_field :name, size: 60 %>
+
+<fieldset>
+  <legend>Widgets</legend>
+
+  <table id="widgets" class="sortable">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Widget</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= form.fields_for(:widgets, form.object.widgets.sort{|item1, item2| item1.display_order_position <=> item2.display_order_position }) do |widgets_form| %>
+        <tr class="<%= cycle("even", "odd") %> item">
+          <td class="vertical_move_handle" title="Grab and drag to reorder widgets"><%= widgets_form.hidden_field(:display_order_position, class: "position") %></td>
+          <td>
+            <%= widgets_form.text_field(:name) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</fieldset>

@@ -1,0 +1,12 @@
+<table class="sortable" data-ajax-sort-action="<%= update_display_order_things_path %>">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Widgets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "thing", collection: @menus.rank(:display_order) %>
+  </tbody>
+</table>

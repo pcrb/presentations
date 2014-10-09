@@ -1,0 +1,23 @@
+.sortable {
+	.item {
+		cursor: row-resize;
+		cursor: -webkit-grab;
+		cursor: grab;
+	}
+
+    /* Only needed because support for cursor: grabbing is not universal */
+	.item.ui-sortable-helper {
+		cursor: row-resize;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+
+	.vertical_move_handle {
+		background-image: image-url("vertical_move_handle.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 15px;
+		min-width: 15px;
+		height: 15px;
+	}
+}
