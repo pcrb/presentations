@@ -1,0 +1,3 @@
+[submodule "background-demo"]
+	path = background-demo
+	url = git@github.com:avilyn/background-demo.git
